@@ -55,7 +55,7 @@ function DialogHjem () {
         info.changeScoreBy(-15)
     }
     Dialogmode = false
-    pause(1000)
+    pause(2000)
 }
 scene.onOverlapTile(SpriteKind.Player, tileUtil.door0, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`McDonalds`)
@@ -142,7 +142,7 @@ function DiaglogSupermarked () {
         info.changeScoreBy(-6)
     }
     Dialogmode = false
-    pause(1000)
+    pause(2000)
 }
 function Userstory () {
     game.showLongText("Velkommen til en bedre livsstil", DialogLayout.Center)
@@ -215,7 +215,7 @@ function DialogPureGym () {
         info.changeScoreBy(-10)
     }
     Dialogmode = false
-    pause(1000)
+    pause(2000)
 }
 function DialogBar () {
     Dialogmode = true
@@ -255,7 +255,7 @@ function DialogBar () {
         info.changeScoreBy(5)
     }
     Dialogmode = false
-    pause(1000)
+    pause(2000)
 }
 function Supermarkedet () {
     tiles.setCurrentTilemap(tilemap`Supermarked`)
@@ -321,7 +321,7 @@ function dialogmcd () {
         info.changeScoreBy(-8)
     }
     Dialogmode = false
-    pause(1000)
+    pause(2000)
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile53`, function (sprite, location) {
     sprites.destroyAllSpritesOfKind(SpriteKind.Hjem)
@@ -359,6 +359,7 @@ forever(function () {
         Player1.setImage(assets.image`player1`)
     }
     if (info.score() < -49) {
+        Player1.x += 16
         game.showLongText("Knap så gode beslutninger du...", DialogLayout.Center)
         game.showLongText("Det´ en ommer!", DialogLayout.Center)
         tiles.setCurrentTilemap(tilemap`Startmap`)
